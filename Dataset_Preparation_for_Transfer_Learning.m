@@ -24,8 +24,8 @@ countEachLabel(bxds)
 gtShuffled = shuffle(gtData);
 
 numFiles = numpartitions(gtShuffled)
-numTrain = numFiles*0.7
-numVal = numFiles*0.1
+numTrain = floor(numFiles*0.7)
+numVal = floor(numFiles*0.1)
 
 gtTrain = subset(gtShuffled,1:numTrain);
 gtVal = subset(gtShuffled,(numTrain+1):(numTrain+numVal));
