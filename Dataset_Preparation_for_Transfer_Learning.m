@@ -1,4 +1,4 @@
-//Ground Truth Data//
+%%Ground Truth Data%%
 
 load /CourseData/aslVowels.mat gTruthVowels
 gTruthVowels
@@ -16,7 +16,7 @@ imLabeled = insertObjectAnnotation( ...
     im,"rectangle",bb,lab);
 imshow(imLabeled)
 
-// Splitting the dataset - Train, Validation and Test Data//
+%% Splitting the dataset - Train, Validation and Test Data %%
 load /CourseData/aslVowels.mat gTruthVowels
 [imds,bxds] = objectDetectorTrainingData(gTruthVowels);
 gtData = combine(imds,bxds);
