@@ -1,4 +1,4 @@
-// Augment Images and Bounding Boxes //
+%% Augment Images and Bounding Boxes %%
 
 load /CourseData/aslVowels.mat gTruthVowels
 [imds,bxds] = objectDetectorTrainingData(gTruthVowels);
@@ -18,7 +18,7 @@ spatialRef = affineOutputView(size(augmentedImage),tform)
 augmentedBoxes = bboxwarp(bbox,tform,spatialRef);
 
 
-// Data Augmentation Function //
+%% Data Augmentation Function %%
 load /CourseData/aslVowels.mat gTruthVowels
 [imds,bxds] = objectDetectorTrainingData(gTruthVowels);
 gtData = combine(imds,bxds);
@@ -47,7 +47,7 @@ out = {augmentedImage augmentedBoxes label};
 end
 dataAug = flipAug(data);
 
-// Transform Ground Truth Data with Data Augmentation//
+%% Transform Ground Truth Data with Data Augmentation %%
 % prepare ground truth data
 load /CourseData/aslVowels.mat gTruthVowels
 [imds,bxds] = objectDetectorTrainingData(gTruthVowels);
@@ -68,8 +68,7 @@ annotatedImageAug = insertObjectAnnotation(imAug,"rectangle",bboxAug,label);
 imshow(annotatedImageAug)
 gtValAug = transform(gtVal,@flipAug)
 
-
-// Evaluate effictiveness of Data Augmentation // 
+%% Evaluate effictiveness of Data Augmentation %%
 load /CourseData/aslDetectorMaxEp100 aslDetector
 load /CourseData/aslDetectorMaxEp100_withAugmentation aslDetector_withAugmentation 
 load groundTruthVars.mat gtData gtTest gTruthVowels gtLeftSigning gtTest_LeftSigning
