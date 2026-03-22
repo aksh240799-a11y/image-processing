@@ -1,4 +1,4 @@
-// Confusion Matrix //
+%% Confusion Matrix %%
 
 load /CourseData/aslDetectorMaxEp100.mat aslDetector 
 load groundTruthVars.mat gtTest gtData
@@ -10,7 +10,7 @@ metrics = evaluateObjectDetection(results,testSet,0.85)
 confusionchart(confMat{1},confLabels)
 
 
-// Precision and Recall //
+%% Precision and Recall %%
 
 load /CourseData/aslDetectorMaxEp100.mat aslDetector
 load /CourseData/aslVowels.mat gTruthVowels
@@ -36,7 +36,7 @@ ylabel("Precision")
 title("O")
 
 
-// Detection Score Threshold Based on Precision-Recall Curves//
+%% Detection Score Threshold Based on Precision-Recall Curves %%
 
 load /CourseData/aslDetectorMaxEp100.mat aslDetector
 load groundTruthVar.mat gtData
