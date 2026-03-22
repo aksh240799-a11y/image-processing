@@ -1,4 +1,4 @@
-// Define Hpyerparameters //
+%% Define Hpyerparameters %%
 
 load validationData.mat gtVal
 detector = yoloxObjectDetector("tiny-coco", ...
@@ -14,7 +14,7 @@ detector = yoloxObjectDetector("tiny-coco", ...
 
 
 
-// Train a Detector // 
+%% Train a Detector %% 
 % create ground truth datastore
 load /CourseData/aslVowels.mat gTruthVowels
 [imds,bxds] = objectDetectorTrainingData(gTruthVowels);
@@ -50,7 +50,7 @@ aslDetectorToy = trainYOLOXObjectDetector(gtToy,detector,optionsToy);
 
 
 
-// Detecting Object using PreTrained Detector //
+%% Detecting Object using PreTrained Detector %%
 load /CourseData/aslDetector_allTrainingData10Epochs.mat
 manA = imread("manSigningA.jpg");
 
