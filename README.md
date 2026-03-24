@@ -1,6 +1,4 @@
-
 # Object Detection with Transfer Learning
-
 ## Overview
 Fine-tuned a YOLOX object detector using transfer learning to detect 
 American Sign Language (ASL) vowels (A, E, I, O, U) in MATLAB.
@@ -47,25 +45,37 @@ Data Augmentation · Model Evaluation · Computer Vision
 
 ---
 
-## Visual Results : 
-1. Confusion Matrix with IoU (Intersection over Union) = 0.85
-   <img width="523" height="395" alt="image" src="https://github.com/user-attachments/assets/5cdb86ad-1e9c-4605-a9a9-c02451b3f608" />
+## Visual Results
 
-2. Confusion Matrix with IoU (Intersection over Union) = 0.5
-   <img width="338" height="215" alt="image" src="https://github.com/user-attachments/assets/ce68425a-0277-4dff-b0e9-c0e0a02ad647" />
+### 1. Confusion Matrices
 
-3. ASL Detection through transfer learning :
-   <img width="315" height="215" alt="image" src="https://github.com/user-attachments/assets/3e667354-3e99-474c-82c6-09b27006f1c3" />
+| IoU = 0.85 | IoU = 0.5 |
+|:---:|:---:|
+| <img width="400" alt="Confusion Matrix IoU 0.85" src="https://github.com/user-attachments/assets/5cdb86ad-1e9c-4605-a9a9-c02451b3f608"> | <img width="400" alt="Confusion Matrix IoU 0.5" src="https://github.com/user-attachments/assets/ce68425a-0277-4dff-b0e9-c0e0a02ad647"> |
 
-4. Significance of Data Augmentation : 
-   a. Augmenting only GT. labels
-   <img width="636" height="211" alt="image" src="https://github.com/user-attachments/assets/ac65f116-ccbc-4308-96b8-9310806966e5" />
-   b. Augmenting Bounding box value along with GT labels : 
-   <img width="441" height="297" alt="image" src="https://github.com/user-attachments/assets/f56f8966-6645-498b-ab13-d035555d8973" />
+---
 
+### 2. ASL Detection via Transfer Learning
 
-## Certificate
-MathWorks — Object Detection with Deep Learning
-<img width="886" height="570" alt="image" src="https://github.com/user-attachments/assets/a3f3a404-475a-4cfb-876c-e819f048f6aa" />
+<p align="center">
+  <img width="500" alt="ASL Detection" src="https://github.com/user-attachments/assets/3e667354-3e99-474c-82c6-09b27006f1c3">
+</p>
 
-Completed: March 2026
+---
+
+### 3. Significance of Data Augmentation
+
+| Augmenting GT Labels Only | Augmenting BBox + GT Labels |
+|:---:|:---:|
+| <img width="400" alt="Augmenting GT labels only" src="https://github.com/user-attachments/assets/ac65f116-ccbc-4308-96b8-9310806966e5"> | <img width="400" alt="Augmenting BBox with GT labels" src="https://github.com/user-attachments/assets/f56f8966-6645-498b-ab13-d035555d8973"> |
+
+---
+
+## 🏆 Certificate
+**MathWorks — Object Detection with Deep Learning**
+
+<p align="center">
+  <img width="700" alt="MathWorks Certificate - Object Detection with Deep Learning" src="https://github.com/user-attachments/assets/a3f3a404-475a-4cfb-876c-e819f048f6aa">
+</p>
+
+*Completed: March 2026*
